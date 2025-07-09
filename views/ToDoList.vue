@@ -25,6 +25,10 @@ function ToDoGonder() {
   kullanici.ToDoEkle(yToDo.value);
   yToDo.value = '';
 }
+  function todosil(index)
+    {
+      kullanici.todosil(index);
+    }
 </script>
 <template>
     <div>
@@ -36,6 +40,7 @@ function ToDoGonder() {
     <ul>
     <li v-for="(todo, index) in kullaniciToDosu" :key="index">
     {{ todo }}
+      <button @click = "todosil(index)">Sil</button>
     </li>
     </ul>
     
