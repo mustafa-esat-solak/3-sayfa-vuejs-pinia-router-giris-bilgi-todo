@@ -78,7 +78,12 @@ export const kullanKullanici = defineStore('kullanici', {
 
   this.todostore.todolar.push(yToDo);
   this.todostore.todoid.push(this.aktifKullanici.kullaniciID);
-}
+},
+    todosil(index)
+      {
+        todolar.splice(index, 1);
+        todoid.splice(index, 1);
+      }
     
   }
 })
