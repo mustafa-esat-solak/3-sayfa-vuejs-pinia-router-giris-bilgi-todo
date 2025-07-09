@@ -14,7 +14,7 @@ const girisYapildi = ref(false)
 
 function giris() {
   girisYapildi.value = kullanici.girisYap(kullaniciAdi.value, sifre.value)
-  router.push('/bilgiler');
+  
   
 }
 
