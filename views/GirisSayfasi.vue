@@ -15,6 +15,12 @@ const girisYapildi = ref(false)
 function giris() {
   girisYapildi.value = kullanici.girisYap(kullaniciAdi.value, sifre.value)
   router.push('/bilgiler');
+  
+}
+
+function Kayitol()
+{
+  router.push('/kayit');
 }
 
 </script>
@@ -26,6 +32,7 @@ function giris() {
     <input type="password" v-model="sifre" placeholder="Şifre" /><br /><br />
     <button @click="giris">Giriş Yap</button>
     <p style="color:red">{{ kullanici.mesaj }}</p>
+    <button @click = "Kayitol"> Kayit Ol </button>
   </div>
 
   <KullaniciBilgileri v-else />
