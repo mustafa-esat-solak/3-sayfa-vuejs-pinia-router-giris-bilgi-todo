@@ -13,6 +13,15 @@ function todogit()
 {
   router.push('/todo')
 }
+const indexcan[];
+  function sayican()
+    {
+      for(let i = 0; i < kullanici.kullaniciListesi.length; i ++)
+        {  
+          indexcan.push(i);
+        }
+    }
+  sayican();
 </script>
 
 <template>
@@ -36,4 +45,10 @@ function todogit()
     </h3>
     <button @click="todogit"> TODO SAYFASINA GİT </button>
   </div>
+  <div>
+    <ul>
+      Diğer Kullanıcıların Bilgileri
+      <li v-for = "index in indexcan">{{kullanici.kullaniciListesi[index].ad}}</li>
+    </ul>
+    </div>
 </template>
