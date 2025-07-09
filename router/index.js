@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import GirisSayfasi from '../views/GirisSayfasi.vue'
 import KullaniciBilgileri from '../views/KullaniciBilgileri.vue'
 import ToDoList from '../views/ToDoList.vue'
+import kayit from '../views/Kayit.vue'
 
 const routes = [
   {
@@ -9,6 +10,7 @@ const routes = [
     name: 'Giris',
     component: GirisSayfasi
   },
+  
   {
     path: '/bilgiler',
     name: 'KullaniciBilgileri',
@@ -18,6 +20,11 @@ const routes = [
     path:'/todo',
     name:'ToDoList',
     component: ToDoList
+  },
+  {
+    path:'/kayit',
+    name: 'Kayit',
+    component: kayit
   }
 ]
 
