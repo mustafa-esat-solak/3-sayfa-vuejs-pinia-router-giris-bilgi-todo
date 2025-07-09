@@ -29,7 +29,26 @@ export const kullanKullanici = defineStore('kullanici', {
         email: 'Sola3k@mail.com',
         telefon: '0555555557',
         kullaniciID:'2'
+      },
+      {
+        kullaniciAdi: 'admin4',
+        sifre: '1234',
+        ad: 'can',
+        soyad: 'Solak',
+        email: 'Solak4@mail.com',
+        telefon: '0555555558',
+        kullaniciID:'4'
+      },
+      {
+        kullaniciAdi: 'admin5',
+        sifre: '1234',
+        ad: 'ali',
+        soyad: 'solak',
+        email: 'solak5@mail.com',
+        telefon: '05555555559',
+        kullaniciID:'5'
       }
+      
     ],
     aktifKullanici: {
         kullaniciAdi: 'admin',
@@ -74,16 +93,13 @@ export const kullanKullanici = defineStore('kullanici', {
       router.push('/')
     },
     ToDoEkle(yToDo) {
- 
-
   this.todostore.todolar.push(yToDo);
   this.todostore.todoid.push(this.aktifKullanici.kullaniciID);
 },
-    todosil(index)
-      {
-        this.todostore.todolar.splice(index, 1);
-        this.todostore.todoid.splice(index, 1);
-      }
+ToDoSil(index) {
+  this.todostore.todolar.splice(index, 1);
+  this.todostore.todoid.splice(index, 1);
+}
     
   }
 })
